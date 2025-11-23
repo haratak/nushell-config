@@ -29,3 +29,7 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
 
 # Google Cloud SDK
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/home/harataku/google-cloud-sdk/bin')
+
+# Omarchy
+$env.OMARCHY_PATH = ($env.HOME | path join ".local" "share" "omarchy")
+$env.PATH = ($env.PATH | split row (char esep) | prepend ($env.HOME | path join ".local" "share" "omarchy" "bin"))
