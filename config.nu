@@ -21,3 +21,11 @@ if (which zellij | is-not-empty) {
         zellij
     }
 }
+
+# Auto-start uim-fep for SSH sessions (inside Zellij)
+if ($env.SSH_CONNECTION? | is-not-empty) and ($env.UIM_FEP? | is-empty) and ($env.ZELLIJ? | is-not-empty) {
+    if (which uim-fep | is-not-empty) {
+        $env.UIM_FEP = "1"
+        ^uim-fep -u anthy-utf8
+    }
+}

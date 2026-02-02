@@ -30,6 +30,9 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
 # Google Cloud SDK
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/home/harataku/google-cloud-sdk/bin')
 
+# uim-fep (Japanese input on TTY/SSH)
+$env.UIM_DEFAULT_IM_ENGINE = "anthy-utf8"
+
 # Omarchy
 $env.OMARCHY_PATH = ($env.HOME | path join ".local" "share" "omarchy")
 $env.PATH = ($env.PATH | split row (char esep) | prepend ($env.HOME | path join ".local" "share" "omarchy" "bin"))
